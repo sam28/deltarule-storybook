@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customers -- Ordly</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox" />
+  <aside class="app-sidebar">
+    <div class="app-sidebar__brand">
+      <span class="app-sidebar__brand-mark">O</span>
+      <span class="app-sidebar__brand-word">Ordly</span>
+    </div>
+    <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></svg>
+    </label>
+    <div class="workspace-switcher">
+      <span class="workspace-switcher__mark">MB</span>
+      <select class="workspace-switcher__select" aria-label="Switch workspace">
+        <option selected>Maison Bleu</option>
+        <option>Nordbeam Home</option>
+        <option>Loupiote Paris</option>
+        <option>+ Add workspace</option>
+      </select>
+    </div>
+    <nav class="app-sidebar__nav">
+      <div class="app-sidebar__group-label">Main</div>
+      <a href="dashboard.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+        <span class="app-sidebar__link-label">Dashboard</span>
+      </a>
+      <a href="tasks.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+        <span class="app-sidebar__link-label">Products</span>
+      </a>
+      <a href="task-detail.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span class="app-sidebar__link-label">Orders</span>
+      </a>
+      <a href="inbox.html" class="app-sidebar__link is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span class="app-sidebar__link-label">Customers</span>
+      </a>
+      <a href="analytics.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <span class="app-sidebar__link-label">Shipments</span>
+      </a>
+      <div class="app-sidebar__group-label">Account</div>
+      <a href="settings-profile.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><circle cx="9" cy="6" r="2"></circle><line x1="4" y1="12" x2="20" y2="12"></line><circle cx="15" cy="12" r="2"></circle><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="7" cy="18" r="2"></circle></svg>
+        <span class="app-sidebar__link-label">Settings</span>
+      </a>
+    </nav>
+    <div class="app-sidebar__footer">
+      <span class="avatar avatar-sm avatar-violet">CG</span>
+      <div class="app-sidebar__footer-text" style="flex: 1; min-width: 0;">
+        <div style="font-size: var(--text-base); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Camille Girard</div>
+        <div class="text-sm muted" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Maison Bleu</div>
+      </div>
+    </div>
+  </aside>
+  <label for="sidebar-toggle" class="sidebar-backdrop" aria-hidden="true"></label>
+
+  <main class="app-main">
+    <div class="app-topbar">
+      <details class="notif-dropdown">
+        <summary class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span class="icon-btn-badge" aria-hidden="true">3</span>
+        </summary>
+        <div class="notif-panel">
+          <div class="notif-panel__header">Notifications</div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-blue">TB</span>
+            <div>
+              <div class="notif-text"><strong>Thomas Bernard</strong> moved <em>Miles Yoon</em> to VIP status</div>
+              <div class="notif-time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-emerald">LM</span>
+            <div>
+              <div class="notif-text"><strong>Lea Martin</strong> reached out to <em>Nora Castillo</em> (at risk)</div>
+              <div class="notif-time">Yesterday</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-amber">SR</span>
+            <div>
+              <div class="notif-text"><strong>Sofia Rossi</strong> added the customer <em>Julia Renard</em></div>
+              <div class="notif-time">2 days ago</div>
+            </div>
+          </div>
+        </div>
+      </details>
+      <a href="#" class="btn btn-primary btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        Add customer
+      </a>
+    </div>
+
+    <div class="app-content">
+      <div class="page-header">
+        <div>
+          <h1>Customers</h1>
+          <p>Track loyalty, value, and recent purchase activity.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="card kpi-card kpi-card--split">
+          <div>
+            <div class="kpi-label">Customers</div>
+            <div class="kpi-value">1,864</div>
+            <span class="trend-text is-up" style="font-size: var(--text-micro);">+4.8%</span>
+          </div>
+          <svg class="kpi-sparkline-mini" viewBox="0 0 60 32" preserveAspectRatio="none">
+            <polyline points="0,28 12,24 24,18 36,20 48,10 60,4"></polyline>
+          </svg>
+        </div>
+        <div class="card kpi-card kpi-card--split">
+          <div>
+            <div class="kpi-label">New customers</div>
+            <div class="kpi-value">214</div>
+            <span class="trend-text is-up" style="font-size: var(--text-micro);">+11.2%</span>
+          </div>
+          <svg class="kpi-sparkline-mini" viewBox="0 0 60 32" preserveAspectRatio="none">
+            <polyline points="0,26 12,22 24,24 36,14 48,16 60,4"></polyline>
+          </svg>
+        </div>
+        <div class="card kpi-card kpi-card--split">
+          <div>
+            <div class="kpi-label">Loyalty rate</div>
+            <div class="kpi-value">63.8%</div>
+            <span class="trend-text is-up" style="font-size: var(--text-micro);">+2.1%</span>
+          </div>
+          <svg class="kpi-sparkline-mini" viewBox="0 0 60 32" preserveAspectRatio="none">
+            <polyline points="0,24 12,26 24,16 36,18 48,12 60,6"></polyline>
+          </svg>
+        </div>
+        <div class="card kpi-card kpi-card--split">
+          <div>
+            <div class="kpi-label">Customer lifetime value</div>
+            <div class="kpi-value">1,184&nbsp;&euro;</div>
+            <span class="trend-text is-up" style="font-size: var(--text-micro);">+6.4%</span>
+          </div>
+          <svg class="kpi-sparkline-mini" viewBox="0 0 60 32" preserveAspectRatio="none">
+            <polyline points="0,28 12,20 24,22 36,12 48,14 60,4"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="tabs" style="margin-top: 16px;">
+        <a href="#" class="is-active">All customers</a>
+        <a href="#">Active</a>
+        <a href="#">VIP</a>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" placeholder="Search customers..." />
+        </div>
+        <button class="btn btn-outline btn-sm">
+          Last 90 days
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <button class="btn btn-outline btn-sm">
+          All values
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="card" style="padding: 0;">
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding-left: 18px;">Customer ID</th>
+              <th>Name</th>
+              <th>Orders</th>
+              <th>Total spent</th>
+              <th>Avg. order value</th>
+              <th>Status</th>
+              <th>Last order</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-1742</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-blue">TH</span> <div><div>Theo Hammond</div><div class="text-sm muted">theo.hammond@caldwell.app</div></div></div></td>
+              <td>96</td>
+              <td>18,410&nbsp;&euro;</td>
+              <td>192&nbsp;&euro;</td>
+              <td><span class="badge badge-warning">&#9733; VIP</span></td>
+              <td class="text-sm muted">Mar 21, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-8431</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-emerald">CH</span> <div><div>Camila Hart</div><div class="text-sm muted">camila.hart@northmall.co</div></div></div></td>
+              <td>13</td>
+              <td>2,148&nbsp;&euro;</td>
+              <td>165&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Mar 19, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-2844</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-amber">MY</span> <div><div>Miles Yoon</div><div class="text-sm muted">miles.yoon@brightlane.co</div></div></div></td>
+              <td>67</td>
+              <td>12,480&nbsp;&euro;</td>
+              <td>186&nbsp;&euro;</td>
+              <td><span class="badge badge-warning">&#9733; VIP</span></td>
+              <td class="text-sm muted">Mar 18, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-3378</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-rose">LF</span> <div><div>Leila Forde</div><div class="text-sm muted">leila.forde@commoner.co</div></div></div></td>
+              <td>58</td>
+              <td>9,040&nbsp;&euro;</td>
+              <td>156&nbsp;&euro;</td>
+              <td><span class="badge badge-warning">&#9733; VIP</span></td>
+              <td class="text-sm muted">Mar 17, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-6619</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-violet">ZQ</span> <div><div>Zara Quinn</div><div class="text-sm muted">zara.quinn@caldwell.app</div></div></div></td>
+              <td>21</td>
+              <td>3,822&nbsp;&euro;</td>
+              <td>182&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Mar 14, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-1287</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-blue">IR</span> <div><div>Imani Rhodes</div><div class="text-sm muted">imani.rhodes@waxwing.io</div></div></div></td>
+              <td>31</td>
+              <td>5,180&nbsp;&euro;</td>
+              <td>167&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Mar 8, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-4926</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-emerald">RB</span> <div><div>Rory Bennett</div><div class="text-sm muted">rory.bennett@waxwing.io</div></div></div></td>
+              <td>17</td>
+              <td>2,895&nbsp;&euro;</td>
+              <td>170&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Feb 27, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <!-- ECART VOLONTAIRE (visuel/contraste) : le badge "At risk"
+                   est en rouge clair sur rouge fonce, un contraste
+                   insuffisant (proche de 3:1) compare aux autres badges du
+                   systeme -- exactement le type d'ecart que la matrice A11y
+                   de Deltarule est censee detecter. -->
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-5290</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-amber">NC</span> <div><div>Nora Castillo</div><div class="text-sm muted">nora.castillo@brightlane.co</div></div></div></td>
+              <td>8</td>
+              <td>1,386&nbsp;&euro;</td>
+              <td>173&nbsp;&euro;</td>
+              <td><span class="badge" style="background: #fecaca; color: #b91c1c; border-color: #fca5a5;">At risk</span></td>
+              <td class="text-sm muted">Jan 26, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-7306</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-rose">EM</span> <div><div>Elias Mercer</div><div class="text-sm muted">elias.mercer@meridianhq.co</div></div></div></td>
+              <td>11</td>
+              <td>1,742&nbsp;&euro;</td>
+              <td>158&nbsp;&euro;</td>
+              <td><span class="badge" style="background: #fef2f2; color: var(--destructive);">At risk</span></td>
+              <td class="text-sm muted">Jan 14, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-9012</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-violet">IR</span> <div><div>Ines Rambert</div><div class="text-sm muted">ines.rambert@waxwing.io</div></div></div></td>
+              <td>44</td>
+              <td>6,720&nbsp;&euro;</td>
+              <td>176&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Jan 10, 2026</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-3355</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-blue">AF</span> <div><div>Adrien Faucher</div><div class="text-sm muted">adrien.faucher@commoner.co</div></div></div></td>
+              <td>5</td>
+              <td>890&nbsp;&euro;</td>
+              <td>178&nbsp;&euro;</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td class="text-sm muted">Dec 28, 2025</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;" class="text-sm muted">CUS-6644</td>
+              <td><div class="table-cell-user"><span class="avatar avatar-sm avatar-emerald">JR</span> <div><div>Julia Renard</div><div class="text-sm muted">julia.renard@northmall.co</div></div></div></td>
+              <td>3</td>
+              <td>512&nbsp;&euro;</td>
+              <td>171&nbsp;&euro;</td>
+              <td><span class="badge" style="background: #fef2f2; color: var(--destructive);">At risk</span></td>
+              <td class="text-sm muted">Dec 15, 2025</td>
+              <td><button type="button" class="row-menu" aria-label="Actions"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="row" style="justify-content: space-between; padding: 12px 18px; border-top: 1px solid var(--border);">
+          <span class="text-sm muted">1-12 of 1,864</span>
+          <div class="pagination">
+            <button class="pagination__btn" disabled aria-label="First page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+            </button>
+            <button class="pagination__btn" disabled aria-label="Previous page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="pagination__btn is-active" aria-current="page">1</button>
+            <button class="pagination__btn">2</button>
+            <button class="pagination__btn">3</button>
+            <button class="pagination__btn" aria-label="Next page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <button class="pagination__btn" aria-label="Last page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

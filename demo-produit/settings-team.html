@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings -- Team -- Ordly</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox" />
+  <aside class="app-sidebar">
+    <div class="app-sidebar__brand">
+      <span class="app-sidebar__brand-mark">O</span>
+      <span class="app-sidebar__brand-word">Ordly</span>
+    </div>
+    <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></svg>
+    </label>
+    <div class="workspace-switcher">
+      <span class="workspace-switcher__mark">MB</span>
+      <select class="workspace-switcher__select" aria-label="Switch workspace">
+        <option selected>Maison Bleu</option>
+        <option>Nordbeam Home</option>
+        <option>Loupiote Paris</option>
+        <option>+ Add workspace</option>
+      </select>
+    </div>
+    <nav class="app-sidebar__nav">
+      <div class="app-sidebar__group-label">Main</div>
+      <a href="dashboard.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+        <span class="app-sidebar__link-label">Dashboard</span>
+      </a>
+      <a href="tasks.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+        <span class="app-sidebar__link-label">Products</span>
+      </a>
+      <a href="task-detail.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span class="app-sidebar__link-label">Orders</span>
+      </a>
+      <a href="inbox.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span class="app-sidebar__link-label">Customers</span>
+      </a>
+      <a href="analytics.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <span class="app-sidebar__link-label">Shipments</span>
+      </a>
+      <div class="app-sidebar__group-label">Account</div>
+      <a href="settings-profile.html" class="app-sidebar__link is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><circle cx="9" cy="6" r="2"></circle><line x1="4" y1="12" x2="20" y2="12"></line><circle cx="15" cy="12" r="2"></circle><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="7" cy="18" r="2"></circle></svg>
+        <span class="app-sidebar__link-label">Settings</span>
+      </a>
+    </nav>
+    <div class="app-sidebar__footer">
+      <span class="avatar avatar-sm avatar-violet">CG</span>
+      <div class="app-sidebar__footer-text" style="flex: 1; min-width: 0;">
+        <div style="font-size: var(--text-base); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Camille Girard</div>
+        <div class="text-sm muted" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Maison Bleu</div>
+      </div>
+    </div>
+  </aside>
+  <label for="sidebar-toggle" class="sidebar-backdrop" aria-hidden="true"></label>
+
+  <main class="app-main">
+    <div class="app-topbar">
+      <details class="notif-dropdown">
+        <summary class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span class="icon-btn-badge" aria-hidden="true">3</span>
+        </summary>
+        <div class="notif-panel">
+          <div class="notif-panel__header">Notifications</div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-blue">TB</span>
+            <div>
+              <div class="notif-text"><strong>Thomas Bernard</strong> flagged low stock on <em>Micro Peel Serum</em></div>
+              <div class="notif-time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-emerald">LM</span>
+            <div>
+              <div class="notif-text"><strong>Lea Martin</strong> added the product <em>Radiance Ritual Set</em></div>
+              <div class="notif-time">Yesterday</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-amber">SR</span>
+            <div>
+              <div class="notif-text"><strong>Sofia Rossi</strong> updated the price of <em>HydraBloom Night Cream</em></div>
+              <div class="notif-time">2 days ago</div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="app-content">
+      <div class="page-header">
+        <div>
+          <h1>Settings</h1>
+          <p>Manage your profile, subscription, and team.</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <a href="settings-profile.html">Profile</a>
+        <a href="settings-billing.html">Billing</a>
+        <a href="settings-team.html" class="is-active">Team</a>
+      </div>
+
+      <div class="card" style="padding: 0; max-width: 760px;">
+        <div class="row" style="justify-content: space-between; padding: 16px 18px;">
+          <div class="card-title" style="margin: 0;">Members -- 9</div>
+          <button class="btn btn-primary btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Invite member
+          </button>
+        </div>
+        <!-- ECART VOLONTAIRE (oubli) : pas de colonne "Last login" ici,
+             alors que Settings > Profile affiche cette meme information
+             pour l'utilisateur courant -- une donnee disponible ailleurs
+             dans le produit, absente de cette vue. -->
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding-left: 18px;">Member</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding-left: 18px;"><div class="table-cell-user"><span class="avatar avatar-sm avatar-violet">CG</span> Camille Girard <span class="text-sm muted">-- camille@maison-bleu.fr</span></div></td>
+              <td>Owner</td>
+              <td><span class="badge badge-dot badge-success">Active</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;"><div class="table-cell-user"><span class="avatar avatar-sm avatar-blue">TB</span> Thomas Bernard <span class="text-sm muted">-- thomas@maison-bleu.fr</span></div></td>
+              <td>Admin</td>
+              <td><span class="badge badge-dot badge-success">Active</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;"><div class="table-cell-user"><span class="avatar avatar-sm avatar-emerald">LM</span> Lea Martin <span class="text-sm muted">-- lea@maison-bleu.fr</span></div></td>
+              <td>Member</td>
+              <td><span class="badge badge-dot badge-success">Active</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;"><div class="table-cell-user"><span class="avatar avatar-sm avatar-amber">SR</span> Sofia Rossi <span class="text-sm muted">-- sofia@maison-bleu.fr</span></div></td>
+              <td>Member</td>
+              <td><span class="badge badge-dot badge-success">Active</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 18px;"><div class="table-cell-user"><span class="avatar avatar-sm avatar-rose">MD</span> Marc Dubois <span class="text-sm muted">-- marc@maison-bleu.fr</span></div></td>
+              <td>Member</td>
+              <td><span class="badge badge-dot badge-outline">Invited</span></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+import{n as e}from"./iframe-DCfj4Ekk.js";import{a as t,n}from"./rolldown-runtime-DkW27tQK.js";function r(e){let t=i.useRef(e);return i.useEffect(()=>{t.current=e}),i.useMemo(()=>((...e)=>t.current?.(...e)),[])}var i,a,o;function s(){return(s=n((()=>{i=t(e(),1),a=Object.defineProperty,o=(e,t)=>a(e,`name`,{value:t,configurable:!0}),o(r,`useCallbackRef`)})))()}export{r as n,s as t};

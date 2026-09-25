@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings -- Billing -- Ordly</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox" />
+  <aside class="app-sidebar">
+    <div class="app-sidebar__brand">
+      <span class="app-sidebar__brand-mark">O</span>
+      <span class="app-sidebar__brand-word">Ordly</span>
+    </div>
+    <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></svg>
+    </label>
+    <div class="workspace-switcher">
+      <span class="workspace-switcher__mark">MB</span>
+      <select class="workspace-switcher__select" aria-label="Switch workspace">
+        <option selected>Maison Bleu</option>
+        <option>Nordbeam Home</option>
+        <option>Loupiote Paris</option>
+        <option>+ Add workspace</option>
+      </select>
+    </div>
+    <nav class="app-sidebar__nav">
+      <div class="app-sidebar__group-label">Main</div>
+      <a href="dashboard.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+        <span class="app-sidebar__link-label">Dashboard</span>
+      </a>
+      <a href="tasks.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+        <span class="app-sidebar__link-label">Products</span>
+      </a>
+      <a href="task-detail.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span class="app-sidebar__link-label">Orders</span>
+      </a>
+      <a href="inbox.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span class="app-sidebar__link-label">Customers</span>
+      </a>
+      <a href="analytics.html" class="app-sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <span class="app-sidebar__link-label">Shipments</span>
+      </a>
+      <div class="app-sidebar__group-label">Account</div>
+      <a href="settings-profile.html" class="app-sidebar__link is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><circle cx="9" cy="6" r="2"></circle><line x1="4" y1="12" x2="20" y2="12"></line><circle cx="15" cy="12" r="2"></circle><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="7" cy="18" r="2"></circle></svg>
+        <span class="app-sidebar__link-label">Settings</span>
+      </a>
+    </nav>
+    <div class="app-sidebar__footer">
+      <span class="avatar avatar-sm avatar-violet">CG</span>
+      <div class="app-sidebar__footer-text" style="flex: 1; min-width: 0;">
+        <div style="font-size: var(--text-base); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Camille Girard</div>
+        <div class="text-sm muted" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Maison Bleu</div>
+      </div>
+    </div>
+  </aside>
+  <label for="sidebar-toggle" class="sidebar-backdrop" aria-hidden="true"></label>
+
+  <main class="app-main">
+    <div class="app-topbar">
+      <details class="notif-dropdown">
+        <summary class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <span class="icon-btn-badge" aria-hidden="true">3</span>
+        </summary>
+        <div class="notif-panel">
+          <div class="notif-panel__header">Notifications</div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-blue">TB</span>
+            <div>
+              <div class="notif-text"><strong>Thomas Bernard</strong> flagged low stock on <em>Micro Peel Serum</em></div>
+              <div class="notif-time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-emerald">LM</span>
+            <div>
+              <div class="notif-text"><strong>Lea Martin</strong> added the product <em>Radiance Ritual Set</em></div>
+              <div class="notif-time">Yesterday</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="avatar avatar-sm avatar-amber">SR</span>
+            <div>
+              <div class="notif-text"><strong>Sofia Rossi</strong> updated the price of <em>HydraBloom Night Cream</em></div>
+              <div class="notif-time">2 days ago</div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="app-content">
+      <div class="page-header">
+        <div>
+          <h1>Settings</h1>
+          <p>Manage your profile, subscription, and team.</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <a href="settings-profile.html">Profile</a>
+        <a href="settings-billing.html" class="is-active">Billing</a>
+        <a href="settings-team.html">Team</a>
+      </div>
+
+      <div class="stack" style="max-width: 640px;">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <!-- ECART VOLONTAIRE (libelle) : cette section s'appelle
+                   "Subscription" ici, mais le bouton d'action juste en
+                   dessous dit "Change plan" -- deux termes pour le meme
+                   concept dans la meme page. -->
+              <div class="card-title">Subscription</div>
+              <div class="card-subtitle">Growth plan -- billed annually</div>
+            </div>
+            <span class="badge badge-dot badge-success">Active</span>
+          </div>
+          <p style="font-size: var(--text-2xl); font-weight: 600; margin: 0;">49&nbsp;&euro; <span class="text-sm muted" style="font-weight: 400;">/ month</span></p>
+          <p class="text-sm muted" style="margin: 4px 0 16px;">Up to 2,000 products, unlimited orders.</p>
+          <button class="btn btn-outline btn-sm">Change plan</button>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Payment method</div>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px; color: var(--muted-foreground);"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+            <div style="flex: 1;">
+              <div style="font-size: var(--text-base); font-weight: 500;">Visa ending in 4242</div>
+              <div class="text-sm muted">Expires 04/2028</div>
+            </div>
+            <button class="btn btn-outline btn-sm">Edit</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Billing history</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Date</th><th>Amount</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aug 1, 2026</td>
+                <td>49&nbsp;&euro;</td>
+                <td><span class="badge badge-success">Paid</span></td>
+                <td style="text-align: right;"><a href="#" class="text-sm" style="text-decoration: none;">Download</a></td>
+              </tr>
+              <tr>
+                <td>Jul 1, 2026</td>
+                <td>49&nbsp;&euro;</td>
+                <td><span class="badge badge-success">Paid</span></td>
+                <td style="text-align: right;"><a href="#" class="text-sm" style="text-decoration: none;">Download</a></td>
+              </tr>
+              <tr>
+                <td>Jun 1, 2026</td>
+                <td>49&nbsp;&euro;</td>
+                <td><span class="badge badge-success">Paid</span></td>
+                <td style="text-align: right;"><a href="#" class="text-sm" style="text-decoration: none;">Download</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
