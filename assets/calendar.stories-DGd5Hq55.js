@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{n as t,t as n}from"./calendar-uDAnjqwZ.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Calendar`,component:n},i={args:{mode:`single`,selected:new Date(2026,9,15),defaultMonth:new Date(2026,9,1),className:`rounded-md border`}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};
